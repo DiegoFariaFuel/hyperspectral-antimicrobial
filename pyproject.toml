@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hyperspectral-antimicrobial"
+version = "0.1.0"
+description = "Research pipeline for antimicrobial-resistance classification from hyperspectral cubes"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "scikit-learn>=1.4",
+  "torch>=2.2",
+]
+
+[project.scripts]
+hsi-amr = "hsi_amr.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
